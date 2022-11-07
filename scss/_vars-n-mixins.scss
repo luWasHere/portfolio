@@ -1,0 +1,33 @@
+// vars
+
+$colorBlack1: #111;
+$colorBlack2: #222;
+
+$colorWhite1: #eee;
+$colorWhite2: #ddd;
+$colorWhite3: #959595;
+
+$colorMain: #472ce3;
+$colorHover: #654cf5;
+
+$colorBg: #0b0a11;
+
+// clases
+
+.mainfont {
+    font-family: 'Kanit';
+}
+.titlefont {
+    font-family: 'Bebas Neue';
+    font-weight: 400;
+}
+
+// mixins
+
+@mixin flex ($direction, $wrap, $justifyC, $alignI) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justifyC;
+    align-items: $alignI;
+}

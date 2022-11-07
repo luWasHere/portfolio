@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:wght@200;400;700&display=swap");
+.mainfont {
+  font-family: "Kanit";
+}
+
+.titlefont {
+  font-family: "Bebas Neue";
+  font-weight: 400;
+}
+
+body {
+  background: #0b0a11;
+  scroll-behavior: smooth;
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: unset;
+  justify-content: center;
+  align-items: center;
+}
+header img {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  filter: contrast(20%) saturate(900%) brightness(10%) blur(1px) hue-rotate(140deg) opacity(1);
+  user-select: none;
+  pointer-events: none;
+}
+header .degradadoBg {
+  position: absolute;
+  z-index: 150;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, transparent 0 70%, #0b0a11 100%);
+}
+header .title {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: unset;
+  justify-content: unset;
+  align-items: center;
+  position: relative;
+  z-index: 200;
+  text-align: center;
+}
+header .title a {
+  text-decoration: none;
+}
+header .title h1 {
+  color: #472ce3;
+  letter-spacing: 8px;
+  margin: 0;
+  padding: 0;
+  font-size: 6rem;
+  cursor: pointer;
+  user-select: none;
+  animation: titleTransition 2s;
+  animation: titleNeon linear 1s;
+  transition: color 0.3s, text-shadow 0.8s;
+}
+header .title h1:hover {
+  color: #654cf5;
+  text-shadow: 0 0 10px rgba(66, 35, 247, 0.2117647059), 0 0 20px rgba(66, 35, 247, 0.2117647059), 0 0 40px rgba(66, 35, 247, 0.2117647059), 0 0 80px rgba(66, 35, 247, 0.2117647059), 0 0 160px rgba(66, 35, 247, 0.2117647059);
+}
+header .title .typing {
+  position: relative;
+  animation: titleTransition 0.8s ease-in;
+}
+header .title .typing p {
+  position: relative;
+  color: #959595;
+  margin-top: 0px;
+  font-size: 1.2rem;
+  height: 22.08px;
+  user-select: none;
+  animation: typing 8s steps(26) infinite;
+  overflow: hidden;
+}
+@keyframes typing {
+  0%, 90%, 100% {
+    width: 0;
+  }
+  30%, 60% {
+    width: 236.23px;
+  }
+}
+header .title .typing:before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right: 0;
+  width: 2px;
+  height: 80%;
+  background-color: #959595;
+  opacity: 0;
+  animation: blinkCursor 0.8s steps(3) infinite;
+  animation-delay: 1s;
+}
+@keyframes blinkCursor {
+  0%, 75% {
+    opacity: 1;
+  }
+  76%, 100% {
+    opacity: 0;
+  }
+}
+@keyframes titleTransition {
+  0% {
+    opacity: 0;
+    transform: scale(0%);
+  }
+  100% {
+    transform: scale(100%);
+    opacity: 1;
+  }
+}
+@keyframes titleNeon {
+  0% {
+    color: #100a33;
+    transform: scale(50%);
+  }
+  30% {
+    transform: scale(100%);
+  }
+  100% {
+    color: #472ce3;
+  }
+}
+header #botonera {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: unset;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: unset;
+  position: relative;
+  z-index: 200;
+  opacity: 0;
+  animation: botoneraTransition 1s forwards;
+  animation-delay: 1s;
+}
+header #botonera div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: unset;
+  justify-content: center;
+  align-items: center;
+  margin: 0 3rem;
+}
+header #botonera div a {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: unset;
+  justify-content: unset;
+  align-items: center;
+  color: #472ce3;
+  font-size: 3em;
+  margin-bottom: 8px;
+  transition: color 0.2s, text-shadow 0.4s;
+  text-decoration: none;
+}
+header #botonera div a:hover {
+  color: #654cf5;
+  text-shadow: 0 0 10px rgba(66, 35, 247, 0.2117647059), 0 0 20px rgba(66, 35, 247, 0.2117647059), 0 0 40px rgba(66, 35, 247, 0.2117647059), 0 0 80px rgba(66, 35, 247, 0.2117647059), 0 0 160px rgba(66, 35, 247, 0.2117647059);
+}
+header #botonera div a:hover > i {
+  transform: translateY(-10%) scale(110%);
+  transition: all 0.2s;
+}
+header #botonera div a h2 {
+  margin-top: 0.5rem;
+  color: #959595;
+  font-weight: normal;
+  font-size: 1rem;
+  user-select: none;
+}
+header #botonera div a:hover > h2 {
+  color: #eee;
+  transition: all 0.2s;
+}
+
+@keyframes botoneraTransition {
+  0% {
+    transform: translateY(130%) scale(50%);
+  }
+  100% {
+    transform: translateY(0%) scale(100%);
+    opacity: 1;
+  }
+}
+#navbar {
+  width: 100%;
+  position: fixed;
+  top: -65px;
+  z-index: 10000;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: unset;
+  flex-wrap: unset;
+  justify-content: center;
+  align-items: center;
+}
+#navbar ul {
+  position: relative;
+  display: flex;
+  flex-direction: unset;
+  flex-wrap: unset;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  width: fit-content;
+  height: 60px;
+  padding: 10px 0px;
+  outline: 5px solid #11101b;
+  border-radius: 0 0 20px 20px;
+  background-color: #11101b;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+#navbar ul a {
+  position: relative;
+  z-index: 100;
+  text-decoration: none;
+  font-size: 16px;
+  color: #959595;
+  display: flex;
+  flex-direction: unset;
+  flex-wrap: unset;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+  user-select: none;
+}
+#navbar ul a li {
+  display: flex;
+  flex-direction: unset;
+  flex-wrap: unset;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+}
+#navbar ul a:nth-child(1).active ~ .slider {
+  left: 0;
+}
+#navbar ul a:nth-child(2).active ~ .slider {
+  left: 120px;
+}
+#navbar ul a:nth-child(3).active ~ .slider {
+  left: 240px;
+}
+#navbar ul a.active:hover ~ .slider {
+  opacity: 0.5;
+  transition: all 0.3s linear;
+}
+#navbar ul a:hover {
+  color: #eee;
+  transition: all 0.5s;
+}
+#navbar ul .active {
+  color: #eee;
+}
+#navbar ul .slider {
+  position: absolute;
+  z-index: 10;
+  width: 120px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, #472ce3);
+  border-radius: 0 0 10px 10px;
+  opacity: 0.3;
+  transition: all 0.3s linear;
+}
+
+/*# sourceMappingURL=main.css.map */
