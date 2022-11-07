@@ -1,6 +1,6 @@
 // vars
 
-$colorBlack1: #111;
+$colorBlack1: #11101b;
 $colorBlack2: #222;
 
 $colorWhite1: #eee;
@@ -12,16 +12,6 @@ $colorHover: #654cf5;
 
 $colorBg: #0b0a11;
 
-// clases
-
-.mainfont {
-    font-family: 'Kanit';
-}
-.titlefont {
-    font-family: 'Bebas Neue';
-    font-weight: 400;
-}
-
 // mixins
 
 @mixin flex ($direction, $wrap, $justifyC, $alignI) {
@@ -31,3 +21,42 @@ $colorBg: #0b0a11;
     justify-content: $justifyC;
     align-items: $alignI;
 }
+
+// clases
+
+.mainfont {
+    font-family: 'Kanit';
+}
+.titlefont {
+    font-family: 'Bebas Neue';
+    font-weight: 400;
+}
+.titleh1 {
+    color: $colorMain;
+    letter-spacing: 8px;
+    margin: 0;
+    padding: 0;
+    transition: color .3s, text-shadow .8s;
+
+    &:hover {
+        color: $colorHover;
+        text-shadow:
+        0 0 10px #4223f736,
+        0 0 20px #4223f736,
+        0 0 40px #4223f736,
+        0 0 80px #4223f736,
+        0 0 160px #4223f736;
+    }
+}
+
+.fadeInY {
+    opacity: 0;
+    transform: translateY(100%) scale(50%);
+    transition: all .3s;
+}
+.transitioned {
+    opacity: 1;
+    transform: translate(0%) scale(100%);
+}
+
+// keyframes

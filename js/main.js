@@ -27,3 +27,29 @@ navBtn.forEach(btn => {
         this.classList.add('active')
     });
 });
+
+
+// transitions
+
+window.addEventListener('scroll', function() {
+    let yOffset = window.pageYOffset;
+
+    let sobreMi = document.querySelector('#sobreMiContainer');
+
+    if (yOffset >= 100) {
+        sobreMi.classList.add('transitioned');
+    } else {
+        sobreMi.classList.remove('transitioned');
+    }
+});
+
+// skills items
+
+let skillBtn = document.querySelectorAll('.skill');
+
+skillBtn.forEach(btn => {
+    btn.addEventListener('click', function() {
+        skillBtn.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active')
+    });
+});

@@ -1,0 +1,200 @@
+body {
+    background: $colorBg;
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 12px;
+    background: $colorBlack1;
+}
+::-webkit-scrollbar-thumb {
+    background: #472ce37c;
+    border-radius: 6px;
+
+    &:hover {
+        background: #472ce3ad;
+    }
+}
+
+header {
+    height: 100vh;
+
+    @include flex (column, unset, center, center);
+
+    img {
+        position: absolute;
+        z-index: 100;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        filter: contrast(20%) saturate(900%) brightness(10%) blur(1px) hue-rotate(140deg) opacity(1);
+        user-select: none;
+        pointer-events: none;
+    }
+    .degradadoBg {
+        position: absolute;
+        z-index: 150;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(to bottom, transparent 0 70%, $colorBg 100%);
+    }
+    .title {
+        @include flex (column, unset, unset, center);
+        position: relative;
+        z-index: 200;
+        text-align: center;
+
+        a {
+            text-decoration: none;
+        }
+        h1 {
+            color: $colorMain;
+            letter-spacing: 8px;
+            margin: 0;
+            padding: 0;
+            font-size: 6rem;
+            line-height: .9em;
+            max-width: 90%;
+            margin: 0 auto;
+            cursor: pointer;
+            user-select: none;
+            
+            animation: titleTransition 2s;
+            animation: titleNeon linear 1s;
+        }
+        @media (max-width:1023px) {
+            h1 {
+                color: $colorHover;
+                text-shadow:
+                0 0 10px #4223f736,
+                0 0 20px #4223f736,
+                0 0 40px #4223f736,
+                0 0 80px #4223f736,
+                0 0 160px #4223f736;
+            }
+        }
+        .typing {
+            position: relative;
+            animation: titleTransition .8s ease-in;
+            p {
+                position: relative;
+                color: $colorWhite3;
+                margin-top: 0px;
+                font-size: 1.2rem;
+                height: 22.08px;
+                user-select: none;
+                animation: typing 8s steps(26) infinite;
+                overflow: hidden;
+            }
+            @keyframes typing {
+                0%, 90%, 100% {
+                    width: 0;
+                }
+                30%, 60% {
+                    width: 236.23px;
+                }
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                top: 3px;
+                right: 0;
+                width: 2px;
+                height: 80%;
+                background-color: $colorWhite3;
+                opacity: 0;
+                animation: blinkCursor 0.8s steps(3) infinite;
+                animation-delay: 1s;
+            }
+            @keyframes blinkCursor {
+                0%, 75% {
+                    opacity: 1;
+                }
+                76%, 100% {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+    @keyframes titleTransition {
+        0% {
+            opacity: 0;
+            transform: scale(0%);
+        }
+        100% {
+            transform: scale(100%);
+            opacity: 1;
+
+        }
+    }
+    @keyframes titleNeon {
+        0% {
+            color: #100a33;
+            transform: scale(50%);
+        }
+        30% {
+            transform: scale(100%);
+        }
+        100% {
+            color: $colorMain;
+        }
+    }
+
+    #botonera {
+        margin-top: 6rem;
+        @include flex (unset, wrap, center, unset);
+        position: relative;
+        z-index: 200;
+        opacity: 0;
+        animation: botoneraTransition 1s forwards;
+        animation-delay: 1s;
+
+        div {
+            @include flex (column, unset, center, center);
+            margin: 0 3rem;
+            a {
+                @include flex (column, unset, unset, center);
+                color: $colorMain;
+                font-size: 3em;
+                margin-bottom: 8px;
+                transition: color .2s, text-shadow .4s;
+                text-decoration: none;
+
+                &:hover {
+                    color: $colorHover;
+                    text-shadow:
+                    0 0 10px #4223f736,
+                    0 0 20px #4223f736,
+                    0 0 40px #4223f736,
+                    0 0 80px #4223f736,
+                    0 0 160px #4223f736;
+                }
+                &:hover > i {
+                    transform: translateY(-10%) scale(110%);
+                    transition: all .2s;
+                }
+
+                h2 {
+                    margin-top: .5rem;
+                    color: $colorWhite3;
+                    font-weight: normal;
+                    font-size: 1rem;
+                    user-select: none;
+                }
+                &:hover > h2 {
+                    color: $colorWhite1;
+                    transition: all .2s;
+                }
+            }
+        }
+    }
+}
+
+@keyframes botoneraTransition {
+    0% {
+        transform: translateY(130%) scale(50%);
+    }
+    100% {
+        transform: translateY(0%) scale(100%);
+        opacity: 1;
+    }
+}

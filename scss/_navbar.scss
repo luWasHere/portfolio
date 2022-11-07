@@ -1,0 +1,72 @@
+#navbar {
+    width: 100%;
+    position: fixed;
+    top: -65px;
+    z-index: 10000;
+    transition: .5s;
+
+    @include flex (unset, unset, center, center);
+
+
+    ul {
+        position: relative;
+        @include flex (unset, unset, center, center);
+        list-style: none;
+        width: fit-content;
+        height: 60px;
+        padding: 10px 0px;
+        outline: 5px solid #0f0e18;
+        border-radius: 0 0 20px 20px;
+        background-color: $colorBlack1;
+        box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.4);
+        overflow: hidden;
+
+        a {
+            position: relative;
+            z-index: 100;
+            text-decoration: none;
+            font-size: 16px;
+            color: $colorWhite3;
+            @include flex (unset, unset, center, center);
+            height: 100%;
+            cursor: pointer;
+            user-select: none;
+
+            li {
+                @include flex (unset, unset, center, center);
+                width: 120px;
+            }
+            &:nth-child(1).active ~ .slider {
+                left: 0;
+            }
+            &:nth-child(2).active ~ .slider {
+                left: 120px;
+            }
+            &:nth-child(3).active ~ .slider {
+                left: 240px;
+            }
+            &.active:hover ~ .slider {
+                opacity: .5;
+                transition: all .3s linear;
+            }
+            &:hover {
+                color: $colorWhite1;
+                transition: all .5s;
+            }
+
+        }
+        .active {
+            color: $colorWhite1;
+        }
+        .slider {
+            position: absolute;
+            z-index: 10;
+            width: 120px;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, $colorMain);
+            border-radius: 0 0 10px 10px;
+            opacity: .3;
+            transition: all .3s linear;
+        }
+    }
+}
