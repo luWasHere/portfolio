@@ -73,7 +73,6 @@ header {
                 font-size: 1.2rem;
                 height: 22.08px;
                 user-select: none;
-                animation: typing 8s steps(26) infinite;
                 overflow: hidden;
             }
             @keyframes typing {
@@ -82,6 +81,14 @@ header {
                 }
                 30%, 60% {
                     width: 236.23px;
+                }
+            }
+            @include media-up(lg) {
+                p {
+                    animation: typing 8s steps(26) infinite;
+                }
+                &:before {
+                    animation: blinkCursor 0.8s steps(3) infinite;
                 }
             }
             &:before {
@@ -93,7 +100,6 @@ header {
                 height: 80%;
                 background-color: $colorWhite3;
                 opacity: 0;
-                animation: blinkCursor 0.8s steps(3) infinite;
                 animation-delay: 1s;
             }
             @keyframes blinkCursor {

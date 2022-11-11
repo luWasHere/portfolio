@@ -238,7 +238,6 @@ header .title .typing p {
   font-size: 1.2rem;
   height: 22.08px;
   user-select: none;
-  animation: typing 8s steps(26) infinite;
   overflow: hidden;
 }
 @keyframes typing {
@@ -247,6 +246,14 @@ header .title .typing p {
   }
   30%, 60% {
     width: 236.23px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .title .typing p {
+    animation: typing 8s steps(26) infinite;
+  }
+  header .title .typing:before {
+    animation: blinkCursor 0.8s steps(3) infinite;
   }
 }
 header .title .typing:before {
@@ -258,7 +265,6 @@ header .title .typing:before {
   height: 80%;
   background-color: #959595;
   opacity: 0;
-  animation: blinkCursor 0.8s steps(3) infinite;
   animation-delay: 1s;
 }
 @keyframes blinkCursor {
