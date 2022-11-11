@@ -177,6 +177,7 @@ body {
 
 header {
   height: 100vh;
+  background: linear-gradient(to bottom, rgba(38, 0, 255, 0.2), transparent);
   display: flex;
   flex-direction: column;
   flex-wrap: unset;
@@ -184,13 +185,20 @@ header {
   align-items: center;
 }
 header img {
+  display: none;
   position: absolute;
   z-index: 100;
   width: 100%;
   height: 100vh;
   object-fit: cover;
+  filter: contrast(20%) saturate(900%) brightness(10%) blur(1px) hue-rotate(140deg) opacity(1);
   user-select: none;
   pointer-events: none;
+}
+@media screen and (min-width: 768px) {
+  header img {
+    display: block;
+  }
 }
 header .degradadoBg {
   position: absolute;
