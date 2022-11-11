@@ -136,10 +136,6 @@ proyecto.forEach(btn => {
 
 // contacto
 
-function copyToClipboard(elemento) {
-
-}
-
 let contactoBtn = document.querySelectorAll('.medio');
 
 contactoBtn.forEach(btn => {
@@ -164,5 +160,5 @@ contactoBtn.forEach(btn => {
             console.log('que')
 
         }, 2000);
-    })
-})
+    });
+});
