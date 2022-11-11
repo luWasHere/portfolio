@@ -3,7 +3,7 @@ body {
     scroll-behavior: smooth;
 }
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 10px;
     background: $colorBlack1;
 }
 ::-webkit-scrollbar-thumb {
@@ -61,17 +61,8 @@ header {
             animation: titleTransition 2s;
             animation: titleNeon linear 1s;
         }
-        @media (max-width:1023px) {
-            h1 {
-                color: $colorHover;
-                text-shadow:
-                0 0 10px #4223f736,
-                0 0 20px #4223f736,
-                0 0 40px #4223f736,
-                0 0 80px #4223f736,
-                0 0 160px #4223f736;
-            }
-        }
+        
+
         .typing {
             position: relative;
             animation: titleTransition .8s ease-in;
@@ -147,10 +138,11 @@ header {
         opacity: 0;
         animation: botoneraTransition 1s forwards;
         animation-delay: 1s;
+        gap: 2.5rem 5rem;
+        max-width: 90%;
 
         div {
             @include flex (column, unset, center, center);
-            margin: 0 3rem;
             a {
                 @include flex (column, unset, unset, center);
                 color: $colorMain;
@@ -196,5 +188,33 @@ header {
     100% {
         transform: translateY(0%) scale(100%);
         opacity: 1;
+    }
+}
+
+// Responsive
+
+@media (max-width: 1023px) {
+    header {
+        .title {
+            h1 {
+                color: $colorHover;
+                text-shadow:
+                0 0 10px #4223f736,
+                0 0 20px #4223f736,
+                0 0 40px #4223f736,
+                0 0 80px #4223f736,
+                0 0 160px #4223f736;
+            }
+        }
+    }
+}
+
+@media (max-width: 385px) {
+    header {
+        .title {
+            h1 {
+                font-size: 5rem;      
+            }   
+        }
     }
 }

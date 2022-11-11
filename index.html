@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="css/main.css">
 
 
-    <title>CV</title>
+    <title>Portfolio | Juan Gramajo</title>
 </head>
 
 <body>
     <header>
-        <img src="img/background-gif.gif" draggable="false" alt="background con código">
+        <img src="img/background-gif.gif" draggable="false" alt="Gif wallpaper código binario">
         <div class="degradadoBg"></div>
         <div class="title">
             <a href="#sobreMi"><h1 class="titlefont titleh1">Juan Gramajo</h1></a>
@@ -49,9 +49,9 @@
 
     <nav id="navbar">
         <ul class="mainfont">
-            <a class="btn active"><li>Sobre mí</li></a>
-            <a class="btn"><li>Proyectos</li></a>
-            <a class="btn"><li>Contacto</li></a>
+            <a href="#sobreMi" class="sobreMi btn active"><li>Sobre mí</li></a>
+            <a href="#proyectos" class="proyectos btn"><li>Proyectos</li></a>
+            <a href="#contacto" class="contacto btn"><li>Contacto</li></a>
             <div class="slider"></div>
         </ul>
     </nav>
@@ -60,37 +60,258 @@
         <section id="sobreMi">
             <div id="sobreMiContainer" class="fadeInY">
                 <div class="text">
-                    <h3 class="titlefont titleh1">SOBRE MÍ</h3>
-                    <p class="mainfont">¡Hola, me llamo Juan! Llevo un poco menos de 6 meses formandome en el campo del desarrollo web, y ya siento estar preparado para empezar con mis primeros proyectos reales. Busco ganar experiencia y dar lo mejor de mí aplicando todos los conocimientos que he ido adquiriendo. Actualmente manejo las siguientes tecnologías:</p>
+                    <h3 class="titlefont titleh1 titleh2">SOBRE MÍ</h3>
+                    <span>
+                        <img src="img/perfil-2.jpg" alt="Foto de perfil">
+                        <p class="mainfont">¡Hola, me llamo Juan!, soy un joven argentino de 19 años, llevo un poco menos de 6 meses formandome en el campo del desarrollo web. Ya estoy preparado para empezar con mis primeros proyectos reales, en los cuales busco ganar experiencia y dar lo mejor de mí aplicando todos los conocimientos que he adquirido hasta el momento. Actualmente manejo las siguientes tecnologías:</p>
+                    </span>
                 </div>
                 <div id="skillsContainer">
                     <div class="items">
-                        <div class="skill active">
-                            <img src="img/icon-html.png" alt="">
+                        <div class="skill html active">
+                            <img src="img/icon-html.png" alt="HTML icon">
                         </div>
-                        <div class="skill">
-                            <img src="img/icon-css.png" alt="">
+                        <div class="skill css">
+                            <img src="img/icon-css.png" alt="CSS icon">
                         </div>
-                        <div class="skill">
-                            <img src="img/icon-sass.png" alt="">
+                        <div class="skill sass">
+                            <img src="img/icon-sass.png" alt="SASS icon">
                         </div>
-                        <div class="skill">
-                            <img src="img/icon-js.png" alt="">
+                        <div class="skill git">
+                            <img src="img/icon-git.png" alt="GIT icon">
                         </div>
-                        <div class="skill">
-                            <img src="img/icon-ps.png" alt="">
+                        <div class="skill js">
+                            <img src="img/icon-js.png" alt="JavaScript icon">
+                        </div>
+                        <div class="skill ps">
+                            <img src="img/icon-ps.png" alt="Photoshopicon">
                         </div>
                     </div>
                     <div class="infoContainer">
-                        <div class="info active">
+                        <div class="info htmlInfo active">
                             <h4 class="titlefont">HTML</h4>
-                            <div class="bar"></div>
-                            <p class="mainfont">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias quo quidem inventore esse cupiditate sit, repudiandae veritatis ipsam. Tenetur corrupti blanditiis possimus esse quasi animi? Reprehenderit fugiat quos quo porro.</p>
+                            <div class="bar uno"></div>
+                            <p class="mainfont">Nivel alto.<br>6 meses de experiencia.<br><i class="fa-solid fa-arrow-up-right-from-square"><a href="https://www.coderhouse.com/certificados/6350faf8301c43000e13ea76" target="_blank"></i>Certificación en Coderhouse.</a><br>Dentro del top 10 mejores alumnos.</p>
+                        </div>
+                        <div class="info cssInfo">
+                            <h4 class="titlefont">CSS</h4>
+                            <div class="bar dos"></div>
+                            <p class="mainfont">Nivel alto.<br>6 meses de experiencia.<br><i class="fa-solid fa-arrow-up-right-from-square"><a href="https://www.coderhouse.com/certificados/6350faf8301c43000e13ea76" target="_blank"></i>Certificación en Coderhouse.</a><br>Dentro del top 10 mejores alumnos.</p>
+                        </div>
+                        <div class="info sassInfo">
+                            <h4 class="titlefont">SASS</h4>
+                            <div class="bar tres"></div>
+                            <p class="mainfont">Nivel medio.<br>3 meses de experiencia.<br><i class="fa-solid fa-arrow-up-right-from-square"><a href="https://www.coderhouse.com/certificados/6350faf8301c43000e13ea76" target="_blank"></i>Certificación en Coderhouse.</a><br>Dentro del top 10 mejores alumnos.</p>
+                        </div>
+                        <div class="info gitInfo">
+                            <h4 class="titlefont">GIT</h4>
+                            <div class="bar tres"></div>
+                            <p class="mainfont">Nivel medio.<br>3 meses de experiencia.<br><i class="fa-solid fa-arrow-up-right-from-square"><a href="https://www.coderhouse.com/certificados/6350faf8301c43000e13ea76" target="_blank"></i>Certificación en Coderhouse.</a><br>Dentro del top 10 mejores alumnos.</p>
+                        </div>
+                        <div class="info jsInfo">
+                            <h4 class="titlefont">JavaScript</h4>
+                            <div class="bar cuatro"></div>
+                            <p class="mainfont">Nivel base.<br>3 meses de experiencia.</p>
+                        </div>
+                        <div class="info psInfo">
+                            <h4 class="titlefont">Photoshop</h4>
+                            <div class="bar cinco"></div>
+                            <p class="mainfont">Nivel alto.<br>5 años de experiencia.<br>Trabajando en diseños para influencers y artistas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="servicioContainer">
+                    <div class="servicio queOfrezco">
+                        <h4 class="titlefont titleh1 titleh2">¿Qué ofrezco?</h4>
+                        <p class="mainfont">Maquetación frontend de sitios web dinámicos, con diseño responsive para adaptar las páginas a todas las resoluciones, haciendo uso de las tecnologías previamente mencionadas.</p>
+                    </div>
+                    <div class="servicio trabajo">
+                        <h4 class="titlefont titleh1 titleh2">Mi trabajo</h4>
+                        <div class="slider">
+                            <div class="slides">
+     
+                                <input type="radio" name="radioBtn" id="radio1">
+                                <input type="radio" name="radioBtn" id="radio2">
+                                <input type="radio" name="radioBtn" id="radio3">
+                                <input type="radio" name="radioBtn" id="radio4">
+    
+                                <span class="slide first">
+                                    <h5 class="mainfont">Aprendizaje rápido</h5>
+                                    <p class="mainfont">Tengo facilidad para adaptarme a nuevos lenguajes y frameworks en caso de ser necesario.</p>
+                                </span>
+                                <span class="slide">
+                                    <h5 class="mainfont">Construcción mobile first</h5>
+                                    <p class="mainfont">Manejo de la metodología "mobile first" dando prioridad al diseño para móviles.</p>
+                                </span>
+                                <span class="slide">
+                                    <h5 class="mainfont">Organizado</h5>
+                                    <p class="mainfont">Manejo de la metodología BEM si es necesario, reutilizacion de clases y variables para optimizar código.</p>
+                                </span>
+                                <span class="slide">
+                                    <h5 class="mainfont">Original</h5>
+                                    <p class="mainfont">Nada de copy-paste de código ajeno; y en caso de utilizar frameworks, personalizarlos adaptandolos al diseño del proyecto.</p>
+                                </span>
+
+                                <div class="navAuto">
+                                    <div class="autoBtn1"></div>
+                                    <div class="autoBtn2"></div>
+                                    <div class="autoBtn3"></div>
+                                    <div class="autoBtn4"></div>
+                                </div>
+
+                                <div class="navManual">
+                                    <label for="radio1" class="manualBtn"></label>
+                                    <label for="radio2" class="manualBtn"></label>
+                                    <label for="radio3" class="manualBtn"></label>
+                                    <label for="radio4" class="manualBtn"></label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section id="proyectos">
+            <div id="proyectosContainer" class="fadeInY">
+                <h3 class="titlefont titleh1 titleh2">PROYECTOS</h3>
+                <div id="proyectos">
+
+                    <div class="proyecto proyectoNonActive">
+                        <div class="enlaces">
+                            <i class="quit fa-sharp fa-solid fa-xmark"></i>
+                            <a href="https://luwashere.github.io/monkesurround/" target="_blank" class="mainfont ancla"><i class="fa-solid fa-arrow-up-right-from-square"></i>Ir al deployment</a>
+                            <a href="https://github.com/luWasHere/monkesurround" target="_blank" class="mainfont ancla"><i class="fa-solid fa-arrow-up-right-from-square"></i>Ir al repositorio</a>
+                        </div>
+                        <div class="imgContainer">
+                            <img src="img/proyecto-mnk.jpg" alt="Vista previa del proyecto">
+                        </div>
+                        <a class="aTitle"><h4 class="titlefont">SITIO WEB BANDA MUSICAL<br><i class="fa-solid fa-arrow-up-right-from-square"></i></h4></a>
+                        <ul class="mainfont">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>SASS</li>
+                        </ul>
+                        <p class="mainfont">Sitio web construido para un grupo de artistas llamado "Monke Surround", el proyecto cuenta con 5 páginas distintas: Inicio, Temas, Miembros, Tienda y Contacto.</p>
+                    </div>
+
+                    <div class="proyecto proyectoNonActive">
+                        <div class="enlaces">
+                            <i class="quit fa-sharp fa-solid fa-xmark"></i>
+                            <a href="https://luwashere.github.io/DarkLight-Theme-Button/" target="_blank" class="mainfont ancla"><i class="fa-solid fa-arrow-up-right-from-square"></i>Ir al deployment</a>
+                            <a href="https://github.com/luWasHere/DarkLight-Theme-Button.git" target="_blank" class="mainfont ancla"><i class="fa-solid fa-arrow-up-right-from-square"></i>Ir al repositorio</a>
+                        </div>
+                        <div class="imgContainer">
+                            <img src="img/proyecto-darklight.jpg" alt="Vista previa del proyecto">
+                        </div>
+                        <a class="aTitle"><h4 class="titlefont">DARK & LIGHT THEME<br><i class="fa-solid fa-arrow-up-right-from-square"></i></h4></a>
+                        <ul class="mainfont">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>SASS</li>
+                            <li>JS</li>
+                        </ul>
+                        <p class="mainfont">Proyecto experimental donde, haciendo uso de JavaScript, se crea una página que intercambia entre los modos claro y oscuro.</p>
+                    </div>
+
+                    <div class="proyecto proyectoNonActive">
+                        <div class="enlaces">
+                            <i class="quit fa-sharp fa-solid fa-xmark"></i>
+                            <a href="https://luwashere.github.io/colorFlipper/" target="_blank" class="mainfont ancla"><i class="fa-solid fa-arrow-up-right-from-square"></i>Ir al deployment</a>
+                            <a href="https://github.com/luWasHere/colorFlipper.git" target="_blank" class="mainfont ancla"><i class="fa-solid fa-arrow-up-right-from-square"></i>Ir al repositorio</a>
+                        </div>
+                        <div class="imgContainer">
+                            <img src="img/proyecto-colorflipper.jpg" alt="Vista previa del proyecto">
+                        </div>
+                        <a class="aTitle"><h4 class="titlefont">Color Flipper<br><i class="fa-solid fa-arrow-up-right-from-square"></i></h4></a>
+                        <ul class="mainfont">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JS</li>
+                        </ul>
+                        <p class="mainfont">Proyecto experimental con JavaScript para crear un generador de colores aleatorios.</p>
+                    </div>
+
+                    <div class="proyecto proyectoNonActive">
+                        <div class="enlaces">
+                            <i class="quit fa-sharp fa-solid fa-xmark"></i>
+                            <a href="https://luwashere.github.io/calculadora/" target="_blank" class="mainfont ancla"><i class="fa-solid fa-arrow-up-right-from-square"></i>Ir al deployment</a>
+                            <a href="https://github.com/luWasHere/calculadora.git" target="_blank" class="mainfont ancla"><i class="fa-solid fa-arrow-up-right-from-square"></i>Ir al repositorio</a>
+                        </div>
+                        <div class="imgContainer">
+                            <img src="img/proyecto-calculadora.jpg" alt="Vista previa del proyecto">
+                        </div>
+                        <a class="aTitle"><h4 class="titlefont">Calculadora<br><i class="fa-solid fa-arrow-up-right-from-square"></i></h4></a>
+                        <ul class="mainfont">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JS</li>
+                        </ul>
+                        <p class="mainfont">Proyecto experimental con JavaScript para crear una calculadora con operaciones básicas.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <div id="contactoContainer" class="fadeInY">
+                <h3 class="titlefont titleh1 titleh2">CONTACTAME</h3>
+                <div class="contactoMedios">
+
+                    <div class="medio">
+                        <img src="img/contacto-mail.png" alt="Email icon">
+                        <span class="titlefont">Email</span>
+                        <div class="info">
+                            <p class="mainfont">gramajojuan<br>contacto@gmail.com</p>
+                            <i class="fa-solid fa-copy"></i>
+                        </div>
+
+                        <div class="mainfont copiado">
+                            <p>¡Copiado al portapapeles!</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="medio">
+                        <img src="img/contacto-wsp.png" alt="WhatsApp icon">
+                        <span class="titlefont">WHATSAPP</span>
+                        <div class="info">
+                            <p class="mainfont">+54 9 3865 394238</p>
+                            <i class="fa-solid fa-copy"></i>
+                        </div>
+
+                        <div class="mainfont copiado">
+                            <p>¡Copiado al portapapeles!</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="medio">
+                        <img src="img/contacto-discord.png" alt="Discord icon">
+                        <span class="titlefont">DISCORD</span>
+                        <div class="info">
+                            <p class="mainfont">Juan Gr.#3549</p>
+                            <i class="fa-solid fa-copy"></i>
+                        </div>
+
+                        <div class="mainfont copiado">
+                            <p>¡Copiado al portapapeles!</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <span class="mainfont"n>&#169 2022 Portfolio - Designed by Juan María Gramajo</span>
+            <ul class="mainfont">
+                <li><a href="#sobreMi">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </footer>
         
     </main>
 

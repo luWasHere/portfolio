@@ -12,6 +12,12 @@ $colorHover: #654cf5;
 
 $colorBg: #0b0a11;
 
+$breakpoints: (
+    sm: 540px,
+    md: 768px,
+    lg: 1024px
+);
+
 // mixins
 
 @mixin flex ($direction, $wrap, $justifyC, $alignI) {
@@ -20,6 +26,12 @@ $colorBg: #0b0a11;
     flex-wrap: $wrap;
     justify-content: $justifyC;
     align-items: $alignI;
+}
+
+@mixin media-up($breakpoint) {
+    @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
 }
 
 // clases
@@ -47,6 +59,19 @@ $colorBg: #0b0a11;
         0 0 80px #4223f736,
         0 0 160px #4223f736;
     }
+}
+
+.titleh2 {
+    @include flex (unset, unset, center, unset);
+    margin: 0 auto;
+    width: fit-content;
+    font-size: 4rem;
+    cursor: default;
+ }
+@media (max-width: 385px) {
+    .titleh2 {
+        font-size: 3.5rem;      
+    }   
 }
 
 .fadeInY {

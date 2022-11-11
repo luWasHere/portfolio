@@ -1,0 +1,119 @@
+#contacto {
+    scroll-margin-top: 150px;
+    #contactoContainer {
+        margin-bottom: 35vh;
+        h3 {
+            margin-bottom: 50px;
+        }
+        .contactoMedios {
+            @include flex (unset, wrap, center, center);
+            width: 90%;
+            margin: 0 auto;
+            gap: 90px 50px;
+
+            .medio {
+                cursor: pointer;
+                @include flex (column, wrap, center, center);
+                filter: brightness(70%);
+                transition: .3s;
+                min-width: 160px;
+
+                position: relative;
+                font-size: 13px;
+                img {
+                    filter: brightness(70%);
+                    width: 5em;
+                    filter: invert(1);
+                }
+                span {
+                    margin-top: 12px;
+                    color: $colorWhite1;
+                    font-size: 2em;
+                }
+                .info {
+                    position: absolute;
+                    opacity: 1;
+                    @include flex (column, unset, flex-start, center);
+                    bottom: -70px;
+                    transition: .3s;
+                    height: 60px;
+                    
+                    p {
+                        color: $colorWhite1;
+                        font-weight: 200;
+                        font-size: 1.1em;
+                        text-align: center;
+                    }
+                    i {
+                        color: $colorWhite1;
+                        margin-top: 10px;
+                    }
+                }
+                &:hover {
+                    filter: brightness(100%);
+                    transform: scale(110%);
+                    transition: .3s;
+                }
+                .copiado {
+                    position: absolute;
+                    width: 100%;
+                    width: 9em;
+                    height: 100%;
+                    @include flex (unset, unset, center, flex-start);
+                    p {
+                        opacity: 0;
+                        text-align: center;
+                        color: $colorWhite1;
+                        background: rgba(0, 0, 0, .9);
+                        border-radius: 10px;
+                        padding: 30px 0px;
+                        transform: scale(30%);
+                        box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+                    }
+                    @keyframes avisoCopiado {
+                        0% {
+                            opacity: 0;
+                        }
+                        15% {
+                            opacity: 1; 
+                            transform: scale(100%);
+                        }
+                        70% {
+                            opacity: 1;
+                            transform: scale(100%);      
+                        }
+                        100% {
+                            opacity: 0;
+                            transform: scale(30%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Responsive
+
+@include media-up(md) {
+    #contacto {
+        #contactoContainer {
+            .contactoMedios {
+                gap: 90px;
+                .medio {
+                    font-size: 16px;
+                    .info {
+                        opacity: 0;
+                        transform: translateY(-30%);
+                        transition: .3s;
+                    }
+                    &:hover > .info {
+                        opacity: 1;
+                        transform: translateY(0%);
+                        transition: .3s;
+                    }
+                }
+            }
+        }
+    }
+}
